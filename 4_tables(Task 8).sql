@@ -5,7 +5,6 @@ CREATE TABLE student_info (student_id INT NOT NULL PRIMARY KEY,student_name VARC
 ALTER TABLE student_info
 ADD CONSTRAINT unique_student_name UNIQUE (student_name);
 
-
 INSERT INTO student_info (student_id, student_name, course, email, age) VALUES
 (1, 'Rahul Verma', 'B.Tech', 'rahul.verma@gmail.com', 20),
 (2, 'Anjali Gupta', 'MBA', 'anjali.gupta@gmail.com', 22),
