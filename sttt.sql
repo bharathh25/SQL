@@ -1,6 +1,5 @@
-create database RTO;
-use RTO;
-
+create database st;
+use st;
 CREATE TABLE LLR_INFO (LLR_ID VARCHAR(20) PRIMARY KEY, Applicant_Name VARCHAR(30), Date_of_Birth DATE,
     Address VARCHAR(20),Contact_Number VARCHAR(15), Email VARCHAR(100), Issue_Date DATE, 
     Expiry_Date DATE, Blood_Group VARCHAR(5), Gender VARCHAR(20));
@@ -116,42 +115,3 @@ SELECT*FROM  LLR_INFO;
 SELECT*FROM  LLR_TEST_INFO;
 SELECT*FROM  DRIVING_LICENCE_INFO;
 SELECT*FROM  DRIVING_LICENSE_TEST_INFO;
-
-
-
-UPDATE LLR_INFO SET Address = 'Whitefield new' WHERE LLR_ID = 'LLR037';
-UPDATE LLR_INFO SET Address = 'Jayanagar new' WHERE LLR_ID = 'LLR038';
-
-UPDATE LLR_TEST_INFO SET Test_Center = 'Sarjapur Test Center new' WHERE Test_ID = 'TEST014';
-UPDATE LLR_TEST_INFO SET Test_Center = 'Kalyan Nagar Test Center new' WHERE Test_ID = 'TEST15';
-
-UPDATE DRIVING_LICENCE_INFO SET Address = 'Domlur new' WHERE DL_ID = 'DL007';
-UPDATE DRIVING_LICENCE_INFO SET Address = 'Hebbal new' WHERE DL_ID = 'DL008';
-
-UPDATE DRIVING_LICENSE_TEST_INFO SET Test_Center = 'Bellandur Test Center new' WHERE Test_ID = 'TEST112';
-UPDATE DRIVING_LICENSE_TEST_INFO SET Test_Center = 'Electronic City Test Center new' WHERE Test_ID = 'TEST113';
-
-
-
-INSERT INTO LLR_INFO (LLR_ID, Applicant_Name, Date_of_Birth, Address, Contact_Number, Email, Issue_Date, Expiry_Date, Blood_Group, Gender) VALUES
-('LLR053', 'Anil Gupta', '1980-12-15', 'JP Nagar', '9876543232', 'anil.gupta@gmail.com', '2024-01-23', '2026-01-23', 'B+', 'Male'),
-('LLR064', 'Riya Singh', '1995-01-05', 'Malleswaram', '9876543233', 'riya.singh@gmail.com', '2024-01-24', '2026-01-24', 'O-', 'Female');
-
-INSERT INTO LLR_TEST_INFO (LLR_ID, Test_ID, Test_Date, Test_Time, Test_Result, Examiner_Name, Test_Center, Remarks, REPORTING_TIME) VALUES
-('LLR053', 'TEST125', '2024-06-01', '09:30:00', 'PASS', 'Mr. Reddy', 'JP Nagar Test Center', 'Well Prepared', '2024-06-01 09:00:00'),
-('LLR064', 'TEST126', '2024-06-02', '11:00:00', 'FAIL', 'Mrs. Mehta', 'Malleswaram Test Center', 'Needs More Practice', '2024-06-02 10:30:00');
-
-INSERT INTO DRIVING_LICENCE_INFO (DL_ID, LLR_ID, TEST_ID, Applicant_Name, Date_of_Birth, Address, Contact_Number, Email, Issue_Date, DL_Expiry_Date) VALUES
-('DL053', 'LLR053', 'TEST125', 'Anil Gupta', '1980-12-15', 'JP Nagar', '9876543232', 'anil.gupta@gmail.com', '2024-01-23', '2026-01-23'),
-('DL064', 'LLR064', 'TEST126', 'Riya Singh', '1995-01-05', 'Malleswaram', '9876543233', 'riya.singh@gmail.com', '2024-01-24', '2026-01-24');
-
-INSERT INTO DRIVING_LICENSE_TEST_INFO (DL_ID, Test_ID, Test_Date, Test_Time, Test_Result, Examiner_Name, Test_Center, Remarks, ISSUE_TIME) VALUES
-('DL053', 'TEST127', '2024-06-01', '09:45:00', 'PASS', 'Dr. Kumar', 'JP Nagar Test Center', 'Good Performance', '2024-06-01 09:15:00'),
-('DL064', 'TEST128', '2024-06-02', '11:30:00', 'FAIL', 'Mr. Rao', 'Malleswaram Test Center', 'Work on Skills', '2024-06-02 11:00:00');
-
-SELECT*FROM  LLR_INFO;
-SELECT*FROM  LLR_TEST_INFO;
-SELECT*FROM  DRIVING_LICENCE_INFO;
-SELECT*FROM  DRIVING_LICENSE_TEST_INFO;
-
-
